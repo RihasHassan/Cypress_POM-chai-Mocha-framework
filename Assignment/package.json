@@ -1,0 +1,20 @@
+{
+  "name": "assignment",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "execute": "npx cypress run -s ./cypress/e2e/TestCases/*.js"
+  },
+  "keywords": [],
+  "author": "Rihas",
+  "license": "ISC",
+  "dependencies": {
+    "cypress": "^10.8.0",
+    "rimraf": "^3.0.2"
+  },
+  "devDependencies": {
+    "cypress-mochawesome-reporter": "^3.2.2",
+    "cypress-xpath": "^2.0.1"
+  }
+}

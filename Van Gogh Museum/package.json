@@ -1,0 +1,32 @@
+{
+  "dependencies": {
+    "cypress": "^10.9.0",
+    "rimraf": "^3.0.2"
+  },
+  "name": "van-gogh-museum",
+  "version": "1.0.0",
+  "main": "index.js",
+  "devDependencies": {
+    "cypress-cucumber-preprocessor": "^4.3.1",
+    "cypress-xpath": "^2.0.1",
+    "multiple-cucumber-html-reporter": "^2.0.0"
+  },
+  "scripts": {
+    "pretest": "rimraf -r cypress/cucumber-json/*.json",
+    "execute": "npx cypress run"
+  },
+  "cypress-cucumber-preprocessor": {
+    "step_definitions": "cypress/e2e/TestSuite",
+    "nonGlobalStepDefinitions": true,
+    "cucumberJson": {
+      "generate": "true",
+      "outputFolder": "cypress/cucumber-json",
+      "filePrefix": "VanGoghMuseum",
+      "fileSuffix": ".cucumber"
+    }
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
