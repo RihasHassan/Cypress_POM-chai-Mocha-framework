@@ -41,7 +41,6 @@ Cypress.Commands.add('trim',{prevSubject:'element'},(ele)=>{
 
 Cypress.Commands.add('cookieAlert',()=>{
 
-  cy.wait(1000)
 
   cy.xpath('//button[contains(@class,"cookie-banner-button") and contains(text(),"Akkoord")]')
   .click()

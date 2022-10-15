@@ -15,6 +15,7 @@ module.exports = defineConfig({
     watchForFileChanges:false,
     pageLoadTimeout: 90000,
     chromeWebSecurity: false,
+    defaultCommandTimeout: 7000,
 
     "baseUrl":'https://www.vangoghmuseum.nl',
     setupNodeEvents(on, config) {

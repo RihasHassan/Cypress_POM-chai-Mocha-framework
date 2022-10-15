@@ -19,20 +19,17 @@ searchWithItem(searchingItem)
 {
     cy.get(this.searchField_locator).type(searchingItem,{force: true})
       .get(this.searchButton_locator).click({force: true})
-      cy.wait(4000)
       
 }
 
 searchResultCount()
 {
-    cy.wait(1000)
 
      return cy.get('.results').trim()   
 }
 
 clicksOnFirstProduct()
 {
-    //cy.get('.lazy-image.collection-art-object-item-image[data-src="https://iiif.micr.io/NyxcG/full/200,/0/default.jpg"]', { timeout: 10000 })
     cy.xpath(this.firstProduct_Locator_xpath)
     .invoke('show')
     .first()
@@ -44,7 +41,6 @@ clicksOnFirstProduct()
 
 clicksOnObjectgegevens()
 {
-        cy.wait(2000)
         cy.get('button[aria-label="Open Objectgegevens"]').scrollIntoView().click({ force: true })
 }
 PaintingDetailsCheck()
